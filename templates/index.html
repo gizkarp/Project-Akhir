@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA Corn & Potato Leaf Detection</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='/css/style.css') }}  type="text/css">
+    <!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav id="home" class="navbar">
+        <h1 class="logo">Corn & Potato Leaf Detection</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#home">Home</a></li>
+            <li ><a href="#explore-menu">Deteksi Jagung</a></li>
+            <li ><a href="#explore-menu-kentang">Deteksi Kentang</a></li>
+            <li><a href="#events-menu">Penyakit</a></li>
+            <li class="ctn"><a href="#tim-menu">Kelompok</a></li>
+        </ul>
+        <img src={{ url_for('static', filename='/img/menu.png') }} alt="" class="menu-btn">
+    </nav>
+    <header style="background-image: url_for('static', filename='/img/bg2.png');">
+            <div class="header-content">
+                <h1>Deteksi Penyakit Daun Tanaman Jagung dan Kentang</h1>
+                <div class="line"></div>
+                <p>Deteksi penyakit daun pada tanaman kentang dan jagung merupakan proses penting dalam upaya pemantauan dan pengendalian kesehatan tanaman. Melalui aplikasi ini, berbagai gejala dan ciri khas penyakit daun dapat diidentifikasi, yang dapat membantu petani atau ahli pertanian mengambil langkah-langkah yang diperlukan untuk melindungi dan memelihara tanaman tersebut.</p>
+                <a href="#explore-menu" class="ctn">Mulai Deteksi Jagung</a>
+                <a href="#explore-menu-kentang" class="ctn">Mulai Deteksi Kentang</a>
+            </div>
+    </header>
+
+    <!--Deteksi Jagung-->
+    <section id="explore-menu" class="explore">
+        <div class="explore-content">
+            <h1>Deteksi Penyakit Daun Tanaman Jagung</h1>
+            <div class="line"></div>
+            <img src={{ url_for('static', filename='/img/ex-upload.jpg') }} alt="" width="300">
+            <p>Silahkan Masukkan Gambar</p>
+            <p><input type="file" id="input_gambar" name="file"></p>
+            <a href="#" id="prediksi_submit" class="ctn">Prediksi</a>
+        </div>
+        <div class="hasilprediksi">
+            <br>
+            <!-- Bagian Halaman untuk Hasil Prediksi -->
+            <div id="hasil_prediksi" align="center">
+                <!-- Hasil Prediksi akan ditampilkan di sini-->
+            </div>
+        </div>
+    </section>
+
+    <!--Deteksi Kentang-->
+    <section id="explore-menu-kentang" class="explore-kentang">
+        <div class="explore-content">
+            <h1>Deteksi Penyakit Daun Tanaman Kentang</h1>
+            <div class="line"></div>
+            <img src={{ url_for('static', filename='/img/ex-upload.jpg') }} alt="" width="300">
+            <p>Silahkan Masukkan Gambar</p>
+            <p><input type="file" id="input_gambar" name="file"></p>
+            <a href="#" id="prediksi_submit" class="ctn">Prediksi</a>
+        </div>
+        <div class="hasilprediksi">
+            <br>
+            <!-- Bagian Halaman untuk Hasil Prediksi -->
+            <div id="hasil_prediksi" align="center">
+                <!-- Hasil Prediksi akan ditampilkan di sini-->
+            </div>
+        </div>
+    </section>
+
+    <!--events-->
+    <section id="events-menu" class="events">
+            <div class="title">
+                <h1>Deskripsi Penyakit Jagung dan Kentang</h1>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src={{ url_for('static', filename='/img/Corn Common Rust.JPG') }} alt="">
+                    <h4>Corn Common Rust</h4>
+                    <p>Penyakit ini disebabkan oleh jamur Puccinia sorghi. Jamur melewati musim dingin di inang alternatif (spesies dari Oxalis) dan melepaskan spora selama musim semi. Spora dapat dipindahkan dalam jarak yang sangat jauh oleh angin dan hujan. Spora memulai proses infeksi ketika menghinggapi daun. Infeksi sekunder dari tanaman ke tanaman juga dapat terjadi karena angin dan hujan. Perkembangan penyakit ini didukung oleh kelembaban yang relatif tinggi (hampir 100%), embun, hujan, dan suhu dingin antara 15 dan 20 °C (dapat bervariasi tergantung daerah)</p>
+                    <a href="#" class="ctn">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="col">
+                    <img src={{ url_for('static', filename='/img/Corn Gray Leaf Spot.JPG') }} alt="">
+                    <h4>Corn Gray Leaf Spot</h4>
+                    <p>Penyakit bercak daun abu-abu disebabkan oleh jamur Cercospora zeae maydis. Jamur ini bertahan dalam sisa-sisa tanaman di tanah dalam waktu yang lama. Selama musim semi, spora dibawa ke daun bagian bawah oleh percikan air hujan dan angin. Siklus hidupnya didukung oleh suhu tinggi (25 hingga 30 °C), kelembaban tinggi (embun, kabut) dan basahnya daun untuk jangka waktu yang lama. Cuaca panas dan kering menghambat perkembangannya. Jamur menyelesaikan siklus hidupnya (dari infeksi ke produksi spora baru) dalam 14-21'hari pada varietas yang rentan dan dalam 21-28 hari dalam varietas yang tahan.</p>
+                    <a href="#" class="ctn">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src={{ url_for('static', filename='/img/Corn Leaf Blight.JPG') }} alt="">
+                    <h4>Corn Leaf Blight</h4>
+                    <p>Penyakit ini disebabkan oleh jamur Cochliobolus heterostrophu (juga dikenal sebagai Bipolaris maydis). Jamur ini bertahan dalam sisa-sisa tanaman di tanah. Ketika kondisinya baik, ia menghasilkan. spora yang dipindahkan ke tanaman baru oleh angin dan percikan hujan. Jamur ini berkecambah pada daun dan dapat menyelesaikan siklus hidupnya (dari infeksi hingga produksi spora baru) dalam waktu 72 jam. Perkembangan jamur dan proses infeksi lebih didukung oleh cuaca lembab, basahnya daun dan suhu mulai dari 22 hingga 30° C. Kerusakan pada daun mengurangi produktivitas tanaman dan dapat menurunkan hasil panen jika infeksi terjadi di awal musim tanam.</p>
+                    <a href="#" class="ctn">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="col">
+                    <img src={{ url_for('static', filename='/img/Corn Healthy.jpg') }} alt="">
+                    <h4>Corn Healthy</h4>
+                    <p>Daun jagung yang sehat memiliki daun sempurna, memiliki pelepah, tangkai, dan helai daun. Bentuknya memanjang. Antara pelepah dan tangkai daun terdapat lidah-lidah (ligula). Tulang daun sejajar dengan ibu tulang daun. Permukaan daun ada yang licin dan ada yang berambut. Stoma pada daun jagung berbentuk halter, yang khas dimiliki Poaceae (suku rumput-rumputan). Setiap stoma dikelilingi sel-sel epidermis berbentuk kipas. Struktur ini berperan penting dalam respon tanaman menanggapi defisit air pada sel-sel daun. Jika tanaman mengalami kekeringan, sel-sel kipas akan mengerut, menutup lubang stomata, dan membuat daun melipat ke bawah sehingga mengurangi transpirasi.</p>
+                    <a href="#" class="ctn">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+    </section>
+
+    <!--kelompok-->
+    <section id="tim-menu" class="events">
+        <div class="title">
+            <h1>Kelompok Starla 4</h1>
+            <div class="line"></div>
+        </div>
+        <div class="tutor-list">
+            <div class="kartu-tutor">
+                <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
+                <p>Gizka Refyana P.</p>
+            </div>
+            <div class="kartu-tutor">
+                <img src="https://images.ctfassets.net/1wryd5vd9xez/4DxzhQY7WFsbtTkoYntq23/a4a04701649e92a929010a6a860b66bf/https___cdn-images-1.medium.com_max_2000_1_Y6l_FDhxOI1AhjL56dHh8g.jpeg"/>
+                <p>Irma Amanda P.</p>
+            </div>
+            <div class="kartu-tutor">
+                <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3021752-inline-i-1-why-square-designed-its-new-offices-to-work-like-a-city.jpg"/>
+                <p>Afni Virda A.</p>
+            </div>
+            <div class="kartu-tutor">
+                <img src="https://blogs-images.forbes.com/jackkelly/files/2019/06/Jack-Kelly_avatar_1559658819-400x400.jpg"/>
+                <p>Ichsan Fajrie W.</p>
+            </div>
+        </div>
+</section>
+
+
+    <section class="footer">
+        <p>Starla 4</p>
+        <p>Copyright @ 2023 Starla 4 - Orbit Future Academy</p>
+    </section>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+    <!-- JavaScript untuk Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+</body>
+</html>

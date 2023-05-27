@@ -50,6 +50,8 @@ $(document).ready(function(){
 		str += "<h3>Hasil Prediksi </h3>";
 		str += "<br>";
 		str += "<img src='" + image_prediksi + "' width=\"200\"></img>"
+		str += "<br>";
+		str += "<br>";
 		str += "<h3>" + data_prediksi + "</h3>";
 	}
 	$("#hasil_prediksi").html(str);
